@@ -130,7 +130,7 @@ const PredictionPageCard = ({ user, setRefreshInfo, team, eventData, prizePool, 
 
   const betOnTeam = () => {
     const watchListIndex = userPortfolio.findIndex(portfolioItem => portfolioItem.teamAddress === team.tokenAddress),
-          purchaseInfo = {teamTitle: team.teamTitle, teamAddress: team.tokenAddress, tokenBuyAmount: ((tokenBuyAmount * eventBonusRate?.discountRate).toFixed(2)).toString(), eventCode, watchListIndex}
+          purchaseInfo = {teamTitle: team.teamTitle, teamAddress: team.tokenAddress, tokenBuyAmount, eventCode, watchListIndex}
     
     setDisableButton(true)
     dispatch(purchaseTeamToken(purchaseInfo))

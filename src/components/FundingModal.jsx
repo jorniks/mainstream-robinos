@@ -110,7 +110,7 @@ const FundingModal = ({setRefreshInfo, showFundingForm, setShowFundingForm, assi
             </div>
             
             <div className="py-2 text-xs">
-              You can minimize this pane and continue browsing the site. Your deposit will be credited to your account when it is confirmed nd you will be notified.
+              You can minimize this pane and continue browsing the site. Your deposit will be credited to your account when it is confirmed and you will be notified.
             </div>
           </section>
         </div>
