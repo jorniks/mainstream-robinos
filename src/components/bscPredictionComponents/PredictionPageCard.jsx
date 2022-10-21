@@ -263,8 +263,8 @@ const PredictionPageCard = ({ user, setRefreshInfo, team, eventData, prizePool, 
                   <h6 className="font-semibold">{team.teamTitle}</h6>
                 </div>
               </div>
-              
-              <h6 className="">Please confirm if you want to proceed!!!</h6>
+
+              <h6 className="">Please confirm if you want to proceed</h6>
             </section>
 
             <section className="flex justify-between">
