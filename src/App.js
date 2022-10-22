@@ -16,6 +16,7 @@ import PortfolioPage from "./pages/userPages/PortfolioPage";
 import TeamHistoryPage from './pages/userPages/TeamHistoryPage';
 import FundingHistoryPage from './pages/userPages/FundingHistoryPage';
 import PageLoading from './pages/PageLoading';
+import Footer from './components/Footer';
 
 
 
@@ -68,28 +69,34 @@ function App() {
 
 
   return (
-    <div className="min-h-screen relative mb-16">
-      <Header user={userData} setRefreshInfo={setRefreshInfo} />
+    <>
+      <div className="min-h-screen relative mb-16">
+        <Header user={userData} setRefreshInfo={setRefreshInfo} />
 
-      {isLoading === true ?
-        <PageLoading />
-      :
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
+        {isLoading === true ?
+          <PageLoading />
+        :
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
 
-          <Route path="/me/profile" element={<ProfilePage user={userData} setRefreshInfo={setRefreshInfo} />} />
-          <Route path="/me/portfolio" element={<PortfolioPage user={userData} setRefreshInfo={setRefreshInfo} />} />
-          <Route path="/me/portfolio/history" element={<TeamHistoryPage user={userData} setRefreshInfo={setRefreshInfo} />} />
-          <Route path="/me/funding/history" element={<FundingHistoryPage user={userData} setRefreshInfo={setRefreshInfo} />} />
+            <Route path="/me/profile" element={<ProfilePage user={userData} setRefreshInfo={setRefreshInfo} />} />
+            <Route path="/me/portfolio" element={<PortfolioPage user={userData} setRefreshInfo={setRefreshInfo} />} />
+            <Route path="/me/portfolio/history" element={<TeamHistoryPage user={userData} setRefreshInfo={setRefreshInfo} />} />
+            <Route path="/me/funding/history" element={<FundingHistoryPage user={userData} setRefreshInfo={setRefreshInfo} />} />
 
-          <Route path="event/:eventID" element={<PredictionPage user={userData} setRefreshInfo={setRefreshInfo} />} />
-        </Routes>
-      }
+            <Route path="event/:eventID" element={<PredictionPage user={userData} setRefreshInfo={setRefreshInfo} />} />
+          </Routes>
+        }
+        
+
+        <ToastContainer position="bottom-left" theme="colored" />
+      </div>
+
       
-
-      <ToastContainer position="bottom-left" theme="colored" />
-    </div>
+      <Footer />
+    </>
   );
 }
+
 
 export default App;

@@ -118,7 +118,7 @@ const PortfolioPage = ({ user, setRefreshInfo }) => {
       <section className="sm:px-8">
         <section className={`grid grid-cols-12 gap-6 ${activeTab !== 'invested' && 'hidden'}`}>
           {
-            userPortfolio?.length ?
+            userPortfolio?.find(portfolioItem => portfolioItem.claimed === false) ?
               userPortfolio.map((portfolioItem, index) => (
                 portfolioItem.claimed === false &&
                   <>
@@ -138,7 +138,8 @@ const PortfolioPage = ({ user, setRefreshInfo }) => {
               ))
             :
               <div className="col-span-12 text-center text-lg">
-                You have not invested in any team at the moment
+                {/* You have not invested in any team at the moment */}
+                Ongoing event teams you bought will appear here
               </div>
           }
         </section>
