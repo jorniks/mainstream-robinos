@@ -34,7 +34,7 @@ const TeamHistoryPage = ({ user }) => {
 
       <section className={`grid grid-cols-12 gap-6`}>
         {
-          userPortfolio?.length ?
+          userPortfolio?.find(portfolioItem => portfolioItem.claimed === true) ?
             userPortfolio.map((portfolioItem, index) => (
               portfolioItem.claimed === true &&
                 <>

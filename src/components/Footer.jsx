@@ -18,13 +18,13 @@ const Footer = () => {
           <h6 className="text-xxxs leading-tight">Mino Twitter</h6>
         </a>
         
-        <a href="https://discord.com/invite/uvbjt5tR4X" target="_blank" title='Mino NFT Twitter' rel="noreferrer" className="text-2xl">
+        <a href="https://discord.com/invite/uvbjt5tR4X" target="_blank" title='Mino NFT Discord' rel="noreferrer" className="text-2xl">
           <i className="fab fa-discord"></i>
 
           <h6 className="text-xxxs leading-tight">Robinos discord</h6>
         </a>
         
-        <a href="https://robinos.gitbook.io/robinos-tokenized-prediction-utility-platform/" target="_blank" title='Mino NFT Twitter' rel="noreferrer" className="text-2xl">
+        <a href="https://robinos.gitbook.io/robinos-tokenized-prediction-utility-platform/" target="_blank" title='Mino NFT Docs' rel="noreferrer" className="text-2xl">
           <i className="fas fa-scroll"></i>
 
           <h6 className="text-xxxs leading-tight">Robinos docs</h6>
